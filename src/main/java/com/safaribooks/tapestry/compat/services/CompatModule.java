@@ -14,7 +14,10 @@
 
 package com.safaribooks.tapestry.compat.services;
 
+import org.apache.tapestry5.RenderSupport;
+import org.apache.tapestry5.internal.services.RenderSupportImpl;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
+import org.apache.tapestry5.ioc.ServiceBinder;
 import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.services.transform.ComponentClassTransformWorker2;
 
@@ -24,6 +27,10 @@ import com.safaribooks.tapestry.compat.transform.IncludeStylesheetWorker;
  
 /** Register services used to support compatability. */
 public class CompatModule {
+	
+	public static void bind(final ServiceBinder binder) {
+		binder.bind(RenderSupport.class, RenderSupportImpl.class);
+	}
 
     @Contribute(ComponentClassTransformWorker2.class)
     public static void provideTransformWorkers(
