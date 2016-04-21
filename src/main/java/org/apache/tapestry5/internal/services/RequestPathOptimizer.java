@@ -21,6 +21,7 @@ package org.apache.tapestry5.internal.services;
  * totally unknown in that situation.
  *
  * @see org.apache.tapestry5.SymbolConstants#FORCE_ABSOLUTE_URIS
+ * @deprecated This class is not in the latest version of Tapestry.
  */
 public interface RequestPathOptimizer
 {
@@ -32,6 +33,7 @@ public interface RequestPathOptimizer
      *
      * @param path to be optimized
      * @return the same path, or a new path that is equivalent, relative to the current request's URL
+     * @deprecated 
      */
     String optimizePath(String path);
 }

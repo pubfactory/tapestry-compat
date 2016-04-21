@@ -23,6 +23,7 @@ import java.lang.annotation.*;
  *
  * @see org.apache.tapestry5.annotations.IncludeStylesheet
  * @see org.apache.tapestry5.annotations.Path
+ * @deprecated
  */
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)

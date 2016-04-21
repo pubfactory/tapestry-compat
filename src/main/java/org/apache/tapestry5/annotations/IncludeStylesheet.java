@@ -30,6 +30,7 @@ import java.lang.annotation.*;
  *
  * @see org.apache.tapestry5.annotations.Path
  * @see org.apache.tapestry5.annotations.IncludeJavaScriptLibrary
+ * @deprecated
  */
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
