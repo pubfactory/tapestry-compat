@@ -28,7 +28,8 @@ import com.safaribooks.tapestry.compat.transform.IncludeStylesheetWorker;
 /** Register services used to support compatability. */
 public class CompatModule {
 	
-	public static void bind(final ServiceBinder binder) {
+	@SuppressWarnings("deprecation")
+	public static void bind(ServiceBinder binder) {
 		binder.bind(RenderSupport.class, RenderSupportImpl.class);
 	}
 
