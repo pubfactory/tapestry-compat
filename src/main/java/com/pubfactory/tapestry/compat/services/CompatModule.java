@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.safaribooks.tapestry.compat.services;
+package com.pubfactory.tapestry.compat.services;
 
 import org.apache.tapestry5.RenderSupport;
 import org.apache.tapestry5.internal.services.RenderSupportImpl;
@@ -21,8 +21,8 @@ import org.apache.tapestry5.ioc.ServiceBinder;
 import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.services.transform.ComponentClassTransformWorker2;
 
-import com.safaribooks.tapestry.compat.transform.IncludeJavaScriptLibraryWorker;
-import com.safaribooks.tapestry.compat.transform.IncludeStylesheetWorker;
+import com.pubfactory.tapestry.compat.transform.IncludeJavaScriptLibraryWorker;
+import com.pubfactory.tapestry.compat.transform.IncludeStylesheetWorker;
 
  
 /** Register services used to support compatability. */

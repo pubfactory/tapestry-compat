@@ -1,4 +1,4 @@
-package com.safaribooks.tapestry.compat.transform;
+package com.pubfactory.tapestry.compat.transform;
 
 import org.apache.tapestry5.Asset;
 import org.apache.tapestry5.annotations.IncludeJavaScriptLibrary;
