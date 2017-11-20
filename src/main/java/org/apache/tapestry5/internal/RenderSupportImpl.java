@@ -159,7 +159,7 @@ public class RenderSupportImpl implements RenderSupport {
 
 	@Override
 	public void addInit(String functionName, String... parameters) {
-		javaScriptSupport.addInitializerCall(functionName, new JSONArray(parameters));
+		javaScriptSupport.addInitializerCall(functionName, new JSONArray((Object[]) parameters));
 	}
 
 }

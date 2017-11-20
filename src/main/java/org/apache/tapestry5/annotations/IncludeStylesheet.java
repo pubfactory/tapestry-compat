@@ -30,11 +30,12 @@ import java.lang.annotation.*;
  *
  * @see org.apache.tapestry5.annotations.Path
  * @see org.apache.tapestry5.annotations.IncludeJavaScriptLibrary
- * @deprecated
+ * @deprecated use {@link Import} instead.
  */
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
+@Deprecated
 public @interface IncludeStylesheet
 {
     /**
