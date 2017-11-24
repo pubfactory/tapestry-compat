@@ -23,6 +23,7 @@ import org.apache.tapestry5.func.F;
 import org.apache.tapestry5.func.Mapper;
 import org.apache.tapestry5.func.Worker;
 import org.apache.tapestry5.ioc.Resource;
+import org.apache.tapestry5.ioc.internal.util.ClasspathResource;
 import org.apache.tapestry5.ioc.services.SymbolSource;
 import org.apache.tapestry5.model.MutableComponentModel;
 import org.apache.tapestry5.plastic.ComputedValue;
@@ -40,7 +41,7 @@ import org.apache.tapestry5.services.transform.TransformationSupport;
 
 /** 
  * Base class used by the JS and stylesheet include annotation workers.  This is based off
- * of the T5 ImportWorker implementation in 5.3.
+ * of the T5 ImportWorker implementation in 5.3 and it's adapted to be used in 5.4 and META-INF/assets/
  * @author ryan
  */
 public abstract class AbstractIncludeWorker implements ComponentClassTransformWorker2 {
@@ -133,7 +134,9 @@ public abstract class AbstractIncludeWorker implements ComponentClassTransformWo
                     PlasticField assetListField = componentClass.introduceField(Asset[].class,
                             "importedAssets_" + method.getDescription().methodName);
 
-                    initializeAssetsFromPaths(model.getBaseResource(), expandedPaths, assetListField);
+                    Resource baseResource = model.getBaseResource();
+                    baseResource = new ClasspathResource("META-INF/assets/" + baseResource.getPath());
+                    initializeAssetsFromPaths(baseResource, expandedPaths, assetListField);
 
                     addMethodAssetOperationAdvice(method, assetListField.getHandle(), getWorker());
                     
