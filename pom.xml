@@ -74,4 +74,19 @@
 		<url>https://github.com/safarijv/tapestry-compat</url>
 		<developerConnection>scm:git:https://github.com/safarijv/tapestry-compat.git</developerConnection>
 	</scm>
+	<distributionManagement>
+		<repository>
+			<id>ifactory-releases</id>
+			<url>
+				http://nexus.pubfactory.com/nexus/content/repositories/releases
+			</url>
+		</repository>
+		<snapshotRepository>
+			<id>ifactory-snapshots</id>
+			<url>
+				http://nexus.pubfactory.com/nexus/content/repositories/snapshots
+			</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
 </project>
